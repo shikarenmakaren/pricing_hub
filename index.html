@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/styles.css">
+  
+  <title>Frontend Mentor | Interactive pricing component</title>
+</head>
+
+<body>
+  <main class="main container">
+    <div class="title-block">
+      <h1 class="main__title">Simple, traffic-based pricing</h1>
+      <p class="main__subtitle">Sign-up for our 30-day trial. No credit card required.</p>
+    </div>
+    
+      <div class="paidplan">
+        <div class="paidplan-container">
+          <div class="paidplan__plan plan">
+            <span class="plan__descript">100K Pageviews</span>
+            <p class="plan__price">
+              <span class="plan__price_bold">$ <span id="price"></span></span> / month
+            </p>
+          </div>
+    
+          <div class="slider">
+            <input class="slider__range" type="range" min="1" max="100" value="16" name="" id="ranger">
+          </div>
+    
+          <div class="paidplan__billing billing">
+            <ul class="billing__list">
+              <li class="billing__item">
+                <p class="billing__descript">Monthly Billing</p>
+              </li>
+  
+              <li class="billing__item switch">
+                <!-- <form class="switch" action="#"> -->
+                    <input class="switch-input" id="switch-1" type="checkbox" onchange="getCheckedBill()">
+                    <label class="switch-label" for="switch-1">Switch</label>
+                <!-- </form>              -->
+              </li>
+  
+              <li class="billing__item">
+                <p class="billing__descript">Yearly Billing</p>
+              </li>
+            </ul>
+            <p class="billing__descript_discount">25% discount</p>
+          </div>
+        </div>
+
+      
+        <div class="paidplan__trial">
+          <ul class="paidplan__advantages advantages__item">
+            <li class="advantages__item">Unlimited websites</li>
+            <li class="advantages__item">100% data ownership</li>
+            <li class="advantages__item">Email reports</li>
+          </ul>
+          <a class="paidplan__button" href="#">Start my trial</a>
+        </div>
+      </div>
+  </main>
+<!-- 
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+
+  <script src="app.js"></script>
+</body>
+</html>
